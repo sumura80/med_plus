@@ -1,3 +1,3 @@
-# def likes_counter(likes)
-#   likes.count
-# end
+def likes_counter(likes)
+  likes.count
+end

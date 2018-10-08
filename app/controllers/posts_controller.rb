@@ -6,12 +6,12 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		# @post = Post.find_by(id: params[:id])
+		@post = Post.find_by(id: params[:id])
     @likes = Like.where(prototype_id: params[:id])
 	end
 
 	def new
-		# @post = Post.new
+		@post = Post.new
 		@post = current_user.posts.build
 	end
 
