@@ -18,19 +18,6 @@
 
 <br><hr>
 
-		<!-- LIKE buttonを追加するためのコード -->
-		<% if @prototype.like_user(current_user) %>
-		   <div id="like-button">
-		     = image_tag("icon_heart_red.svg")
-		     likes_counter(@likes)
-		   </div>
-		<% else %>
-		   <div id="like-button">
-		     = image_tag("icon_heart.svg")
-		     <div id="like-sum"><%= likes_counter(@likes) %></div>
-		  </div>
-		<% end %>
-
 
 
 
