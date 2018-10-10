@@ -1,5 +1,5 @@
-var $heart = $("#like-button img");
-$("#like-button").on("click", function(){
+var $heart = $("#like-btn-unlike");
+$("#like-btn-unlike").on("click", function(){
   var $likeSum = $("#like-sum")
   like_function(#{@post.id}, $(this), $heart, $likeSum)
 });
@@ -9,14 +9,14 @@ function like_function(id, button, heart, sum) {
       $.ajax({url: "/likes/" + id, type: "delete", data: {post_id: id, dataType: "json"}})
       .done(function(data){
       button.removeClass("decrement").addClass("increment")
-      heart.attr("src", "/assets/icon_heart.svg")
+      heart.attr("id", "like-btn-unlike")
       sum.text(data["count"])
       })
     }else{
       $.ajax({url: "/likes", type: "post", data: {post_id: id, dataType: "json"}})
       .done(function(data){
       button.removeClass("increment").addClass("decrement")
-      heart.attr("src", "/assets/icon_heart_red.svg")
+      heart.attr("id", "like-btn")
       sum.text(data["count"])
       })
     }
