@@ -1,0 +1,2 @@
+// render部分だけ切り替え、非同期処理のため。destroyも同様。
+$("#like-button").html("<%= j(render partial: 'likes/likes', locals: { post: @post}) %>")

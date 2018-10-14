@@ -5,21 +5,15 @@
 		 <%= image_tag @post.image_url,class:"show-pic-size"  %>
 			<h2><%= @post.title %></h2>
 			<p class="message-posted-by">Posted by <%= @post.user.username %> <%= time_ago_in_words (@post.created_at) %> ago </p>
+
+			<!--  ライクボタンが表示されるコード/ likeボタンの部分を_likes.html.erbにrender start-->
+			<%= render partial: '/likes/likes', locals: {post: @post} %>
+		  <!--  ライクボタンが表示されるコード　end-->
+		  
 		</div><!-- end of col-md-4 -->
     <div class="visible-xs" style="height:30px;"></div>
 
-		<!--  ライクボタンが表示されるコード start-->
-			<% if @post.like_user(current_user) %>
-			   <div id="like-button">
-			     <span class="fa fa-heart like-btn-unlike" id="like-btn-unlike"></span>
-			      <%= likes_counter(@likes) %>	    
-			   </div>
-			<% else %>
-			   <div id="like-button">
-			     	 <span class="fa fa-heart like-btn" id="like-btn"></span>
-			     <div id="like-sum"><%= likes_counter(@likes) %></div>
-			  </div>
-			<% end %><!--  ライクボタンが表示されるコード　end-->
+
 
 
 

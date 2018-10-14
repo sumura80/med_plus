@@ -38,7 +38,7 @@ gem 'devise', '~> 4.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem 'mini_magick'
-
+gem 'rails-ujs'
 
 
 
