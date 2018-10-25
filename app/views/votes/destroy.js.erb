@@ -1,0 +1,2 @@
+$("<%= @vote_class %>").html("<%= j(render partial: 'votes/votes', locals: {comment: @comment}) %>")
+// render部分だけ切り替え、非同期処理のため。destroyも同様。

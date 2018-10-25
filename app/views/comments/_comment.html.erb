@@ -3,7 +3,8 @@
 	<!-- 改行を反映させるためのコマンド↓ -->   	
 <p><%= h(comment.content).gsub(/\n/, '<br/>').html_safe %></p>
 <p class="message-posted-by">Posted by <%= comment.user.username %> <%= time_ago_in_words(comment.created_at) %> ago</p>
- 
+<!-- voteボタンの部分を_votes.html.erbにrender  postsの中のコメントなので、＠インスタンス変数は使わない-->
+ <%= render partial: '/votes/votes', locals: {comment: comment} %>
 
 	<% if user_signed_in? %>
 	 <% if comment.user_id == current_user.id %>
