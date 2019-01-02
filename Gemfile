@@ -40,7 +40,7 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem 'mini_magick'
 # rails で jqueryを使えるようにするgem
 gem 'rails-ujs'
-
+gem 'oauth'
 
 
 group :development, :test do
@@ -49,6 +49,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
