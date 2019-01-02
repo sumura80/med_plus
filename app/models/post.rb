@@ -18,10 +18,10 @@ class Post < ApplicationRecord
   end
 
 	def self.auto_translate(text:)
-		consumer_key = '5fc9232362f4bf695fe952599b16e33b05c2c53b9'
-		consumer_secret = 'ac3bbc061e7e0d0fb93ac7b3a71bfcb1'
-		url = 'https://mt-auto-minhon-mlt.ucri.jgn-x.jp/api/mt/generalN_ja_en/'
-		name = 'maeko'
+		consumer_key = 'consumer_key'
+		consumer_secret = 'consumer_secret'
+		url = 'リクエストurl'
+		name = '登録名'
 		text = text
 
 		consumer = OAuth::Consumer.new(consumer_key, consumer_secret)
