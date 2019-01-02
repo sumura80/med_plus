@@ -18,7 +18,7 @@
       <!-- ここからshowの右画面 -->
     <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-offset-1 col-md-6">
     		<!-- 改行を反映させるためのコマンド↓ -->   		
-				<p><%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p>
+				<p><%= h(@post.description['en']).gsub(/\n/, '<br/>').html_safe %></p>
 		</div><!-- end of col-md-7 col-md-offset-1 -->
 	</div><!-- row -->
 
@@ -33,7 +33,7 @@
 		    </div><!-- end of heading -->
 
 		    <div id="sample1-med" class="panel-collapse collapse">
-		      <div class="panel-body">This is an example sentence to test if tis accordion button and function works properly.</div>
+		      <div class="panel-body"><%= h(@post.description['ja']).gsub(/\n/, '<br/>').html_safe %></div>
 		    </div>
 
 		  </div><!-- end of panel info -->
